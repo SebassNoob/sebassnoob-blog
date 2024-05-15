@@ -24,6 +24,8 @@
 
     "baseUrl": ".",
     "paths": {
+      "@/*": ["src/*"],
+      "@": ["src"],
       "@components/*": ["src/components/*"],
       "@components": ["src/components"],
       "@hooks/*": ["src/hooks/*"],
@@ -34,6 +36,6 @@
       "@routes": ["src/routes"]
     }
   },
-  "include": ["src"],
+  "include": ["src/**/*", "plugins/**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

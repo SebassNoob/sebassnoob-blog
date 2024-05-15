@@ -5,6 +5,7 @@ export type ButtonColor = 'info' | 'danger' | 'warning' | 'success';
 export interface ButtonProps {
   children: ReactNode;
   onClick?: () => void;
+  href?: string;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   color?: ButtonColor;

@@ -1,6 +1,8 @@
 import { Title, Button, Text, Card } from '@components';
 import { useContext } from 'react';
 import { ClientContext } from '@providers';
+import { BlogCard } from './components/BlogCard';
+import index from '@/content/index.xml';
 
 export function App() {
   const { theme, setTheme, breakpoint, isMobile } = useContext(ClientContext);
@@ -23,6 +25,9 @@ export function App() {
         description="Card Description"
         imgSrc="/assets/vite.svg"
       ></Card>
+      {index.map((blogpost) => (
+        <BlogCard key={blogpost.slug} {...blogpost} />
+      ))}
     </div>
   );
 }

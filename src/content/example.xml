@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<blogpost>
+  <title>my-title</title>
+
+  <description>my-description</description>
+  <keywords>
+    <keyword>my-keyword-1</keyword>
+    <keyword>my-keyword-2</keyword>
+  </keywords>
+  <content>
+    <image>my-img-src</image>
+    <markdown>
+      my-md-src
+    </markdown>
+  </content>
+</blogpost>

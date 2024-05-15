@@ -6,6 +6,7 @@ import {
   buttonRawColors,
 } from './constants';
 import { Loader } from '@components';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 export function Button({
   children,
@@ -15,6 +16,7 @@ export function Button({
   type = 'button',
   disabled = false,
   loading = false,
+  href,
 }: ButtonProps) {
   const isNotClickable = disabled || loading;
   const mergedStyles = twMerge(
@@ -36,7 +38,13 @@ export function Button({
       className={mergedStyles}
       disabled={isNotClickable}
     >
-      {loading ? styledLoader : children}
+      {loading ? (
+        styledLoader
+      ) : href ? (
+        <ReactRouterLink to={href}>{children}</ReactRouterLink>
+      ) : (
+        children
+      )}
     </button>
   );
 }

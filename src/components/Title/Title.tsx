@@ -1,6 +1,6 @@
 import { TitleProps } from './types';
-
-const defaultStyles = 'text-slate-900 dark:text-white';
+import { defaultStyles, twTitleTextSizing } from './constants';
+import { twMerge } from 'tailwind-merge';
 
 export function Title({
   children,
@@ -8,5 +8,10 @@ export function Title({
   className = defaultStyles,
 }: TitleProps) {
   const Tag = `h${order}` as const;
-  return <Tag className={className}>{children}</Tag>;
+  const mergedStyles = twMerge(
+    'font-semibold',
+    twTitleTextSizing[order],
+    className
+  );
+  return <Tag className={mergedStyles}>{children}</Tag>;
 }

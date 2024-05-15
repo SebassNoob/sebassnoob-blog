@@ -10,6 +10,7 @@ export function Card({
   imgSrc,
   title,
   description,
+  date,
   className,
 }: CardProps) {
   const mergedStyles = twMerge(defaultStyles, className);
@@ -23,9 +24,10 @@ export function Card({
           className="w-full h-48 object-cover object-center rounded-t-lg"
         />
       )}
-      <div className="p-6">
+      <div className="p-6 flex flex-col gap-2 items-center">
+        {date && <Text order="sm">{date}</Text>}
         {title && <Title order={2}>{title}</Title>}
-        {description && <Text order="sm">{description}</Text>}
+        {description && <Text order="base">{description}</Text>}
         {children}
       </div>
     </div>
