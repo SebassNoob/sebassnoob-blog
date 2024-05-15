@@ -1,9 +1,6 @@
-export interface Blogpost {
+export interface ParsedBlogpost {
   title: string;
-  description: string;
-  keywords: string[];
-  content: {
-    image: string;
-    markdown: string;
-  };
+  image?: string;
+  markdown: string;
+  date: string;
 }

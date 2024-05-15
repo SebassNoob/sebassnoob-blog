@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This is an example blog post. -->
+<!-- Copy this file and modify the values to create a new blog post. -->
+<!-- Paste into index.xml inside the <blogposts> tag -->
+<blogpost>
+  <!-- Route to the blog page. Must be unique -->
+  <slug>test1</slug>
+
+  <!-- Title of the blog post -->
+  <title>my-title</title>
+
+  <!-- Description of the blog post -->
+  <description>my-description</description>
+
+  <!-- Date of the blog post in yyyy-mm-dd, or anything js can parse with the Date API -->
+  <date>2024-5-15</date>
+
+  <!-- Keywords for the blog post -->
+  <keywords>
+    <keyword>my-keyword-1</keyword>
+    <keyword>my-keyword-2</keyword>
+  </keywords>
+
+  <!-- Content of the blog post -->
+  <content>
+    <!-- Image file path to display at the top of the blog post, optional -->
+    <!-- Path is relative to /public/assets -->
+    <image>my-img-src-optional</image>
+
+    <!-- Markdown file path to display as the content of the blog post -->
+    <!-- Path is relative to /public/raw -->
+    <markdown>
+      my-md-src
+    </markdown>
+  </content>
+</blogpost>

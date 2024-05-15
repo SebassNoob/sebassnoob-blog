@@ -6,3 +6,6 @@ export * from './Loader';
 export * from './Card';
 export * from './Markdown';
 export * from './Pill';
+export * from './Code';
+export * from './List';
+export * from './Table';

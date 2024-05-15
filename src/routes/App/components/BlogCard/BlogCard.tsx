@@ -9,12 +9,13 @@ export function BlogCard({
   keywords,
   content,
 }: Blogpost) {
+  const imgSrc = content.image ? '/assets/' + content.image : undefined;
   return (
     <Card
       title={title}
       description={description}
       date={new Date(date).toDateString()}
-      imgSrc={'/assets/' + content.image}
+      imgSrc={imgSrc}
     >
       <div className="flex flex-row gap-1">
         {keywords.keyword.map((keyword) => (

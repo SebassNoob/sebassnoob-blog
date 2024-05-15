@@ -50,6 +50,9 @@ For GFM, you can _also_ use a plugin:
 It adds support for GitHub-specific extensions to the language:
 tables, strikethrough, tasklists, and literal URLs.
 
+1. f
+2. f
+
 These features **do not work by default**.
 👆 Use the toggle above to add the plugin.
 

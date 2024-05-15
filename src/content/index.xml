@@ -3,14 +3,16 @@
   <blogpost>
     <slug>test1</slug>
     <title>my-title</title>
-    <description>my-description</description>
+    <description>
+      blah blahblah blahblah blahblah blahblah blahblah blahblah blahblah
+      blahblah blahblah blahblah blahblah blahblah blah
+    </description>
     <date>2024-5-15</date>
     <keywords>
       <keyword>my-keyword-1</keyword>
       <keyword>my-keyword-2</keyword>
     </keywords>
     <content>
-      <image>vite.svg</image>
       <markdown>
 test.md
       </markdown>

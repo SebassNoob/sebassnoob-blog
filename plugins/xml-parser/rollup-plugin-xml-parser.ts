@@ -16,11 +16,19 @@ interface Blogpost {
 }
 
 function validateParsedJson(json: any) {
+  if (!json.blogposts || !json.blogposts.blogpost) {
+    console.error(json);
+    throw new Error(`Missing 'blogposts' property`);
+  }
+
   const blogposts = json.blogposts.blogpost;
+
   if (!Array.isArray(blogposts) || blogposts.length === 0) {
     console.error(json);
     throw new Error(`Missing or empty 'blogposts' array`);
   }
+
+  const takenSlugs = new Set<string>();
 
   blogposts.forEach((post: any, index) => {
     if (!post.slug) {
@@ -29,6 +37,15 @@ function validateParsedJson(json: any) {
         `Missing 'slug' property in a blogpost in index ${index}`
       );
     }
+    if (takenSlugs.has(post.slug)) {
+      console.error(post);
+      throw new Error(
+        `Duplicate 'slug' property in a blogpost in index ${index}`
+      );
+    }
+
+    takenSlugs.add(post.slug);
+
     if (!post.title) {
       console.error(post);
       throw new Error(
@@ -95,6 +112,10 @@ export default function xmlParser() {
       } catch (e) {
         console.error(e);
         console.error(`Error parsing ${id}`);
+        if (process.env.NODE_ENV === 'production') {
+          process.exit(1);
+        }
+        return null;
       }
     },
   };

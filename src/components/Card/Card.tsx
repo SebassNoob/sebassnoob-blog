@@ -21,7 +21,7 @@ export function Card({
         <img
           src={imgSrc}
           alt={title ?? imgSrc}
-          className="w-full h-48 object-cover object-center rounded-t-lg"
+          className="min-w-full max-h-48 object-contain object-center rounded-t-lg"
         />
       )}
       <div className="p-6 flex flex-col gap-2 items-center">
