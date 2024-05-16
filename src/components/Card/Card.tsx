@@ -24,8 +24,8 @@ export function Card({
           className="min-w-full max-h-48 object-contain object-center rounded-t-lg"
         />
       )}
-      <div className="px-6 py-4 flex flex-col gap-4 items-center">
-        {date && <Text order="sm">{date}</Text>}
+      <div className="px-6 py-4 flex flex-col gap-4 items-center text-center">
+        {date && <Text order="sm" >{date}</Text>}
         {title && <Title order={2}>{title}</Title>}
         {description && <Text order="base">{description}</Text>}
         {children}

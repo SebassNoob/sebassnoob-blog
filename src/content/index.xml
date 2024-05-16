@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <blogposts>
   <blogpost>
-    <slug>test1</slug>
-    <title>my-title</title>
+    <slug>apple-out-of-touch</slug>
+    <title>Apple is out of touch</title>
     <description>
-      blah blahblah blahblah blahblah blahblah blahblah blahblah blahblah
-      blahblah blahblah blahblah blahblah blahblah blah
+      Apple needs to change its ways fast, lest it become the next IBM.
     </description>
-    <date>2024-5-15</date>
+    <date>2024-5-13</date>
     <keywords>
-      <keyword>my-keyword-1</keyword>
-      <keyword>my-keyword-2</keyword>
+      <keyword>Technology</keyword>
+      <keyword>Opinion</keyword>
     </keywords>
     <content>
+      <image>apple-out-of-touch.png</image>
       <markdown>
-test.md
+apple-out-of-touch.md
       </markdown>
     </content>
   </blogpost>
   <blogpost>
-    <slug>test2</slug>
-    <title>my-title</title>
-    <description>my-description</description>
-    <date>2024-5-15</date>
+    <slug>ai-ethics</slug>
+    <title>
+      The Global Implications of AI Regulation: Balancing Innovation and Ethical
+      Concerns
+    </title>
+    <description>
+      Analysing the future of AI -- what troubles may lie ahead? Should it be
+      more heavily regulated until ethical standards are agreed upon?
+    </description>
+    <date>2024-5-14</date>
     <keywords>
-      <keyword>my-keyword-1</keyword>
-      <keyword>my-keyword-2</keyword>
+      <keyword>Technology</keyword>
+      <keyword>Opinion</keyword>
     </keywords>
     <content>
-      <image>vite.svg</image>
       <markdown>
-test.md
+ai-ethics.md
       </markdown>
     </content>
   </blogpost>

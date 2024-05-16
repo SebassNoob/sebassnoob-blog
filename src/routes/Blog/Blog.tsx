@@ -51,7 +51,7 @@ export function Blog() {
         <img
           src={`/assets/${parsedBlogpost.image}`}
           alt={parsedBlogpost.title}
-          className="w-1/5"
+          className="w-1/4 rounded-md"
         />
       )}
       <div className="flex flex-col gap-2 items-center">

@@ -7,7 +7,8 @@ export function App() {
     <div className="flex flex-col items-center gap-6">
       <Title>My blog</Title>
       <Text>
-        A place where I put some stuff I've written. Enjoy the shitposts.
+        A place where I put some stuff I've written. Enjoy the shitposts and the
+        occasional serious post.
       </Text>
       <div className="flex flex-col w-full sm:w-3/4 lg:w-1/2 items-center gap-4">
         {index.map((blogpost) => (
