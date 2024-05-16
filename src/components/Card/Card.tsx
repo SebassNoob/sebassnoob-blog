@@ -25,7 +25,7 @@ export function Card({
         />
       )}
       <div className="px-6 py-4 flex flex-col gap-4 items-center text-center">
-        {date && <Text order="sm" >{date}</Text>}
+        {date && <Text order="sm">{date}</Text>}
         {title && <Title order={2}>{title}</Title>}
         {description && <Text order="base">{description}</Text>}
         {children}

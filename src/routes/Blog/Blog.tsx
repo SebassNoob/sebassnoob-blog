@@ -54,7 +54,7 @@ export function Blog() {
           className="w-1/4 rounded-md"
         />
       )}
-      <div className="flex flex-col gap-2 items-center">
+      <div className="flex flex-col gap-2 items-center w-full sm:w-3/4 lg:w-1/2">
         <Text order="sm" className="text-slate-500 dark:text-slate-50">
           {new Date(parsedBlogpost.date).toDateString()}
         </Text>
