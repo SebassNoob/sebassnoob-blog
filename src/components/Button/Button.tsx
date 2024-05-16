@@ -31,20 +31,22 @@ export function Button({
       <Loader color={buttonRawColors[color]} className="w-5" />
     </div>
   );
-  return (
+
+  const wrapWithLink = (element: JSX.Element) => {
+    return href ? (
+      <ReactRouterLink to={href}>{element}</ReactRouterLink>
+    ) : (
+      element
+    );
+  };
+  return wrapWithLink(
     <button
       type={type}
       onClick={onClick}
       className={mergedStyles}
       disabled={isNotClickable}
     >
-      {loading ? (
-        styledLoader
-      ) : href ? (
-        <ReactRouterLink to={href}>{children}</ReactRouterLink>
-      ) : (
-        children
-      )}
+      {loading ? styledLoader : children}
     </button>
   );
 }

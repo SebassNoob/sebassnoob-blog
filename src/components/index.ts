@@ -9,3 +9,5 @@ export * from './Pill';
 export * from './Code';
 export * from './List';
 export * from './Table';
+export * from './Header';
+export * from './Footer';

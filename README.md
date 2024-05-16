@@ -8,9 +8,21 @@ feel free to steal the styled components
 
 ## run
 
-`bun run dev`
+### install
+
+requires bun.
+
+```
+bun i
+```
+
+### commands
+
+dev server: `bun run dev`
 
 prettier: `bun run prettier`
+
+build: `bun run build`
 
 ### usage
 

@@ -1,33 +1,19 @@
-import { Title, Button, Text, Card } from '@components';
-import { useContext } from 'react';
-import { ClientContext } from '@providers';
+import { Title, Text } from '@components';
 import { BlogCard } from './components/BlogCard';
 import index from '@/content/index.xml';
 
 export function App() {
-  const { theme, setTheme, breakpoint, isMobile } = useContext(ClientContext);
-
   return (
-    <div className={`App ${theme} ${breakpoint}`}>
-      <Title>App</Title>
-      <Text>Theme: {theme}</Text>
-      <Text>Breakpoint: {breakpoint}</Text>
-      <Text>isMobile: {isMobile.toString()}</Text>
-      <Button
-        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-        loading={false}
-        color="success"
-      >
-        Toggle Theme
-      </Button>
-      <Card
-        title="Card Title"
-        description="Card Description"
-        imgSrc="/assets/vite.svg"
-      ></Card>
-      {index.map((blogpost) => (
-        <BlogCard key={blogpost.slug} {...blogpost} />
-      ))}
+    <div className="flex flex-col items-center gap-6">
+      <Title>My blog</Title>
+      <Text>
+        A place where I put some stuff I've written. Enjoy the shitposts.
+      </Text>
+      <div className="flex flex-col w-full sm:w-3/4 lg:w-1/2 items-center gap-4">
+        {index.map((blogpost) => (
+          <BlogCard key={blogpost.slug} {...blogpost} />
+        ))}
+      </div>
     </div>
   );
 }

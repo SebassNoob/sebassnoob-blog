@@ -16,8 +16,9 @@ export function BlogCard({
       description={description}
       date={new Date(date).toDateString()}
       imgSrc={imgSrc}
+      className="w-full flex flex-col items-center gap-2"
     >
-      <div className="flex flex-row gap-1">
+      <div className="flex flex-row gap-2">
         {keywords.keyword.map((keyword) => (
           <Pill key={keyword}>{keyword}</Pill>
         ))}
