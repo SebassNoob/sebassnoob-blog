@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { usePublic } from '@hooks';
+import { usePublic, useKeybinds } from '@hooks';
 import { Markdown, Title, Text, Loader } from '@components';
 import blogposts from '@/content/index.xml';
 import { useEffect, useState } from 'react';
@@ -17,23 +17,33 @@ export function Blog() {
   );
   const content = usePublic(`/raw/${parsedBlogpost?.markdown}`);
 
+  useKeybinds({
+    Escape: () => navigate('/'),
+    'Alt+s': () =>
+      window.navigator.share({
+        title: parsedBlogpost?.title,
+        url: window.location.href,
+      }),
+  });
+
   useEffect(() => {
+    // if the slug is undefined, we redirect to the 404 page
     if (slug === undefined) {
       navigate('/404');
       return;
     }
+    // get the post with the given slug and redirect to the 404 page if it doesn't exist
     const post = getPost(slug);
     if (!post) {
       navigate('/404');
       return;
     }
-    const { title, content, date } = post;
-    const { image, markdown } = content;
+    // destructure the post object and set the parsed blogpost state
     setParsedBlogpost({
-      title,
-      image,
-      markdown,
-      date,
+      title: post.title,
+      image: post.content.image,
+      markdown: post.content.markdown,
+      date: post.date,
     });
   }, []);
 

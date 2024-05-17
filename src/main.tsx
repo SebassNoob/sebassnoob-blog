@@ -1,9 +1,9 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { ClientProvider } from '@providers';
 import { App, Blog, Error404 } from '@routes';
-import './index.css';
 import { Footer, Header } from '@components';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
