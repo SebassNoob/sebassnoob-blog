@@ -15,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <div className="p-6">
             <Routes>
               <Route path="/" element={<App />} />
+              <Route path="/page/:page" element={<App />} />
               <Route path="/blog/:slug" element={<Blog />} />
               <Route path="*" element={<Error404 />} />
             </Routes>

@@ -21,7 +21,6 @@ export function Button({
   const isNotClickable = disabled || loading;
   const mergedStyles = twMerge(
     twButtonStyles[color],
-
     isNotClickable ? twDisabledButtonStyles : '',
     className
   );
