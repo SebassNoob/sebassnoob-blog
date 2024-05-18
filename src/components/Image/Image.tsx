@@ -14,7 +14,7 @@ export function Image({
 }: ImageProps) {
   const [loaded, setLoaded] = useState(false);
   const mergedSkeletonStyles = twMerge(defaultSkeletonStyle, skeletonClassName);
-  const mergedStyles = twMerge(loaded ? '': 'hidden', className);
+  const mergedStyles = twMerge(loaded ? '' : 'hidden', className);
 
   return (
     <>

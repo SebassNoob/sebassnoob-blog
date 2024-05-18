@@ -17,11 +17,11 @@ export function Layout({ children }: { children: ReactNode }) {
   }, [location]);
   return (
     <main className="dark:bg-zinc-900 min-h-screen w-full transition-all">
-      <div ref={contentRef}>
-        <Header />
-        <div className="p-6">{children}</div>
-        <Footer />
+      <Header />
+      <div className="p-6" ref={contentRef}>
+        {children}
       </div>
+      <Footer />
     </main>
   );
 }
