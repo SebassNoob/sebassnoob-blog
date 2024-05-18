@@ -4,24 +4,40 @@ import ReactDOM from 'react-dom/client';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { ClientProvider } from '@providers';
 import { App, Blog, Error404 } from '@routes';
-import { Footer, Header } from '@components';
+import { Layout } from './layout';
+
+const routes = [
+  {
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: '/page/:page',
+    element: <App />,
+  },
+  {
+    path: '/blog/:slug',
+    element: <Blog />,
+  },
+  {
+    path: '*',
+    element: <Error404 />,
+  },
+];
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ClientProvider>
       <BrowserRouter>
-        <main className="dark:bg-zinc-900 min-h-screen w-full transition-all">
-          <Header />
-          <div className="p-6">
-            <Routes>
-              <Route path="/" element={<App />} />
-              <Route path="/page/:page" element={<App />} />
-              <Route path="/blog/:slug" element={<Blog />} />
-              <Route path="*" element={<Error404 />} />
-            </Routes>
-          </div>
-          <Footer />
-        </main>
+        <Routes>
+          {routes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={<Layout>{route.element}</Layout>}
+            />
+          ))}
+        </Routes>
       </BrowserRouter>
     </ClientProvider>
   </React.StrictMode>

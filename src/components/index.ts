@@ -12,3 +12,4 @@ export * from './Table';
 export * from './Header';
 export * from './Footer';
 export * from './Pagination';
+export * from './Image';
