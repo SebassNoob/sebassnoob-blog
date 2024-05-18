@@ -3,7 +3,17 @@ export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   darkMode: 'selector',
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+      },
+      animation: {
+        'fade-in': 'fade-in 0.2s ease-out',
+      },
+    },
   },
   plugins: [],
 };

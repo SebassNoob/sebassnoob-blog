@@ -33,7 +33,9 @@ export function Button({
 
   const wrapWithLink = (element: JSX.Element) => {
     return href ? (
-      <ReactRouterLink to={href}>{element}</ReactRouterLink>
+      <ReactRouterLink to={href} tabIndex={-1}>
+        {element}
+      </ReactRouterLink>
     ) : (
       element
     );

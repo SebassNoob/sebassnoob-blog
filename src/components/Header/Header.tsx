@@ -9,12 +9,15 @@ import { ClientContext } from '@/providers';
 export function Header() {
   const navigate = useNavigate();
   const { theme, setTheme } = useContext(ClientContext);
+
   return (
-    <header
-      className="flex items-center justify-between p-6 "
-      onClick={() => navigate('/')}
-    >
-      <div className="flex items-center cursor-pointer">
+    <header className="flex items-center justify-between p-6">
+      <div
+        className="flex items-center cursor-pointer"
+        tabIndex={0}
+        onClick={() => navigate('/')}
+        onKeyDown={(e) => e.key === 'Enter' && navigate('/')}
+      >
         <img
           src={pfp}
           alt="Profile"
@@ -27,6 +30,7 @@ export function Header() {
       <button
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         className="p-2 rounded bg-slate-100 dark:bg-black"
+        tabIndex={-1}
       >
         <div className="h-6 w-6">
           {theme === 'light' ? (
