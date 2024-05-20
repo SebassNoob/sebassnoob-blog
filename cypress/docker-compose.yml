@@ -1,0 +1,80 @@
+version: '3'
+services:
+  cypress-chrome:
+    container_name: cypress-chrome
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BROWSER=chrome
+        - PORT=3000
+    depends_on:
+      - server
+    networks:
+      - test
+
+  cypress-webkit:
+    container_name: cypress-webkit
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BROWSER=webkit
+        - PORT=3000
+    depends_on:
+      - server
+    networks:
+      - test
+
+  cypress-firefox:
+    container_name: cypress-firefox
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BROWSER=firefox
+        - PORT=3000
+    depends_on:
+      - server
+    networks:
+      - test
+
+  cypress-edge:
+    container_name: cypress-edge
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BROWSER=edge
+        - PORT=3000
+    depends_on:
+      - server
+    networks:
+      - test
+
+  cypress-electron:
+    container_name: cypress-electron
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BROWSER=electron
+        - PORT=3000
+    depends_on:
+      - server
+    networks:
+      - test
+
+  server:
+    container_name: server
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - test
+
+networks:
+  test:
+    driver: bridge
