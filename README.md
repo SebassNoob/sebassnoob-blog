@@ -28,9 +28,9 @@ build: `bun run build`
 
 requires docker. the test directory is `/cypress`.
 
-Run `./tests.sh` to generate a report.
+In the root directory, run `bun run test` to generate a report formatted in html.
 
-Edit `e2e` and add files to `*.cy.ts` to update tests
+Edit `e2e` and add files with pattern `*.cy.ts` to update tests
 
 ### usage
 

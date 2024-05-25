@@ -79,6 +79,12 @@ done
 # Wait for the containers to finish tests
 docker wait ${containers[@]} > /dev/null
 
+declare -A exit_codes
+
+for container in "${containers[@]}"; do
+  exit_codes[$container]=$(docker inspect --format='{{.State.ExitCode}}' $container)
+done
+
 # if results folder does not exist, create it
 if [ ! -d "./results" ]; then
   mkdir results
@@ -97,4 +103,19 @@ if [ ! -d "./node_modules" ]; then
 fi
 
 bun run reporter.ts
-echo "All done! Report generated in results/index.html"
+echo "All done! Report generated in cypress/results/index.html"
+
+echo "Exit codes:"
+for container in "${containers[@]}"; do
+  echo "$container: ${exit_codes[$container]}"
+done
+
+for code in "${exit_codes[@]}"; do
+  if [[ "$code" -ne 0 ]]; then
+    echo "Some tests failed"
+    exit 1
+  fi
+done
+
+echo "All tests passed"
+exit 0

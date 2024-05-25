@@ -16,6 +16,5 @@ ENV PORT=$PORT
 # Install necessary dependencies if browser is webkit
 RUN if [ "$BROWSER" = "webkit" ] ; then npx playwright install-deps webkit ; fi
 
-# Run the script
-ENTRYPOINT ["sh", "-c"]
-CMD ["npx cypress run --browser \"$BROWSER\" | tee /tmp/cypress-\"$BROWSER\".log 2>&1"]
+ENTRYPOINT ["bash", "-c"]
+CMD ["npx cypress run --browser \"$BROWSER\" | tee /tmp/cypress-\"$BROWSER\".log 2>&1; exit ${PIPESTATUS[0]}"]
