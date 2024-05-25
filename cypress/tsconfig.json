@@ -6,5 +6,5 @@
     "types": ["cypress", "node"],
     "esModuleInterop": true
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "cypress/support/commands.ts"]
 }

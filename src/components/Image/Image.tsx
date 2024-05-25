@@ -10,11 +10,17 @@ export function Image({
   alt,
   className,
   skeletonClassName,
-  ...props
+  ...rest
 }: ImageProps) {
   const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
   const mergedSkeletonStyles = twMerge(defaultSkeletonStyle, skeletonClassName);
   const mergedStyles = twMerge(loaded ? '' : 'hidden', className);
+
+  if (error) {
+    console.error(`Failed to load image: ${src}`);
+    return null;
+  }
 
   return (
     <>
@@ -23,8 +29,9 @@ export function Image({
         src={src}
         alt={alt}
         onLoad={() => setLoaded(true)}
+        onError={() => setError(true)}
         className={mergedStyles}
-        {...props}
+        {...rest}
       />
     </>
   );

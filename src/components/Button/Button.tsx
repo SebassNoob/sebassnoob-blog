@@ -17,6 +17,7 @@ export function Button({
   disabled = false,
   loading = false,
   href,
+  ...rest
 }: ButtonProps) {
   const isNotClickable = disabled || loading;
   const mergedStyles = twMerge(
@@ -46,6 +47,7 @@ export function Button({
       onClick={onClick}
       className={mergedStyles}
       disabled={isNotClickable}
+      {...rest}
     >
       {loading ? styledLoader : children}
     </button>

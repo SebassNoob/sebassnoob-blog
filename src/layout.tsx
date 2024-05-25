@@ -8,6 +8,10 @@ export function Layout({ children }: { children: ReactNode }) {
   const location = useLocation();
   const contentRef = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
+    // prefers reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
     if (contentRef.current) {
       setTimeout(() => {
         contentRef.current!.classList.remove(fadeClass);

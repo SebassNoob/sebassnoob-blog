@@ -12,6 +12,11 @@ services:
       - server
     networks:
       - test
+    develop:
+      watch:
+        - action: sync+restart
+          path: .
+          target: /e2e
 
   cypress-webkit:
     container_name: cypress-webkit
@@ -25,6 +30,11 @@ services:
       - server
     networks:
       - test
+    develop:
+      watch:
+        - action: sync+restart
+          path: .
+          target: /e2e
 
   cypress-firefox:
     container_name: cypress-firefox
@@ -38,6 +48,11 @@ services:
       - server
     networks:
       - test
+    develop:
+      watch:
+        - action: sync+restart
+          path: .
+          target: /e2e
 
   cypress-edge:
     container_name: cypress-edge
@@ -51,6 +66,11 @@ services:
       - server
     networks:
       - test
+    develop:
+      watch:
+        - action: sync+restart
+          path: .
+          target: /e2e
 
   cypress-electron:
     container_name: cypress-electron
@@ -64,12 +84,17 @@ services:
       - server
     networks:
       - test
+    develop:
+      watch:
+        - action: sync+restart
+          path: .
+          target: /e2e
 
   server:
     container_name: server
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: test.Dockerfile
     ports:
       - 3000:3000
     networks:

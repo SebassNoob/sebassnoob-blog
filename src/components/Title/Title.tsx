@@ -6,6 +6,7 @@ export function Title({
   children,
   order = 1,
   className = defaultStyles,
+  ...rest
 }: TitleProps) {
   const Tag = `h${order}` as const;
   const mergedStyles = twMerge(
@@ -13,5 +14,9 @@ export function Title({
     twTitleTextSizing[order],
     className
   );
-  return <Tag className={mergedStyles}>{children}</Tag>;
+  return (
+    <Tag className={mergedStyles} {...rest}>
+      {children}
+    </Tag>
+  );
 }

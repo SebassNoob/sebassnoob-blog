@@ -19,12 +19,13 @@ export function Link({
   order = 'base',
   className = defaultStyles,
   href,
+  ...rest
 }: LinkProps) {
   const textSize = `text-${order}` as const;
   const mergedStyles = twMerge(textSize, className);
 
   return (
-    <ReactRouterLink to={href} className={mergedStyles}>
+    <ReactRouterLink to={href} className={mergedStyles} {...rest}>
       {children}
     </ReactRouterLink>
   );

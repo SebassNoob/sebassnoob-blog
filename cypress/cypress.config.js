@@ -9,4 +9,5 @@ export default defineConfig({
     baseUrl: `http://server:${process.env.PORT}`,
   },
   experimentalWebKitSupport: true,
+  watchForFileChanges: true,
 });

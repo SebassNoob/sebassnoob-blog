@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<blogposts>
+  <blogpost>
+    <slug>apple-out-of-touch</slug>
+    <title>Apple is out of touch</title>
+    <description>
+      Apple needs to change its ways fast, lest it become the next IBM.
+    </description>
+    <date>2024/5/13</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Opinion</keyword>
+    </keywords>
+    <content>
+      <image>apple-out-of-touch.png</image>
+      <markdown>
+apple-out-of-touch.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>ai-ethics</slug>
+    <title>
+      The Global Implications of AI Regulation: Balancing Innovation and Ethical
+      Concerns
+    </title>
+    <description>
+      Analysing the future of AI -- what troubles may lie ahead? Should it be
+      more heavily regulated until ethical standards are agreed upon?
+    </description>
+    <date>2024/5/14</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Opinion</keyword>
+    </keywords>
+    <content>
+      <markdown>
+ai-ethics.md
+      </markdown>
+    </content>
+  </blogpost>
+  <!-- Additional 48 blog posts -->
+  <blogpost>
+    <slug>quantum-computing-future</slug>
+    <title>The Future of Quantum Computing</title>
+    <description>
+      Quantum computing promises to revolutionize various fields, but are we
+      ready for it?
+    </description>
+    <date>2024/5/15</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Innovation</keyword>
+    </keywords>
+    <content>
+      <image>quantum-computing-future.png</image>
+      <markdown>
+quantum-computing-future.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>climate-tech-solutions</slug>
+    <title>Tech Solutions to Climate Change</title>
+    <description>
+      How technology can help mitigate the effects of climate change.
+    </description>
+    <date>2024/5/16</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Environment</keyword>
+    </keywords>
+    <content>
+      <image>climate-tech-solutions.png</image>
+      <markdown>
+climate-tech-solutions.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>cybersecurity-trends</slug>
+    <title>Top Cybersecurity Trends in 2024</title>
+    <description>
+      Keeping up with the latest cybersecurity threats and defenses.
+    </description>
+    <date>2024/5/17</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Security</keyword>
+    </keywords>
+    <content>
+      <image>cybersecurity-trends.png</image>
+      <markdown>
+cybersecurity-trends.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>blockchain-beyond-crypto</slug>
+    <title>Blockchain Beyond Cryptocurrency</title>
+    <description>
+      Exploring the diverse applications of blockchain technology outside of
+      cryptocurrency.
+    </description>
+    <date>2024/5/18</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Blockchain</keyword>
+    </keywords>
+    <content>
+      <image>blockchain-beyond-crypto.png</image>
+      <markdown>
+blockchain-beyond-crypto.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>5g-impact</slug>
+    <title>The Impact of 5G on Modern Communication</title>
+    <description>
+      How 5G technology is transforming communication and connectivity.
+    </description>
+    <date>2024/5/19</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Communication</keyword>
+    </keywords>
+    <content>
+      <image>5g-impact.png</image>
+      <markdown>
+5g-impact.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>robotics-advances</slug>
+    <title>Recent Advances in Robotics</title>
+    <description>
+      The latest developments in robotics and their potential impacts.
+    </description>
+    <date>2024/5/20</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Robotics</keyword>
+    </keywords>
+    <content>
+      <image>robotics-advances.png</image>
+      <markdown>
+robotics-advances.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>wearable-tech</slug>
+    <title>The Rise of Wearable Technology</title>
+    <description>
+      How wearable devices are changing the way we interact with technology.
+    </description>
+    <date>2024/5/21</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Gadgets</keyword>
+    </keywords>
+    <content>
+      <image>wearable-tech.png</image>
+      <markdown>
+wearable-tech.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>vr-ar-future</slug>
+    <title>Virtual and Augmented Reality: The Future of Immersive Tech</title>
+    <description>
+      The potential and challenges of VR and AR technologies.
+    </description>
+    <date>2024/5/22</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Immersive Tech</keyword>
+    </keywords>
+    <content>
+      <image>vr-ar-future.png</image>
+      <markdown>
+vr-ar-future.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>smart-cities</slug>
+    <title>Building the Smart Cities of the Future</title>
+    <description>
+      How smart city technologies are transforming urban life.
+    </description>
+    <date>2024/5/23</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Urban Development</keyword>
+    </keywords>
+    <content>
+      <image>smart-cities.png</image>
+      <markdown>
+smart-cities.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>tech-education</slug>
+    <title>The Importance of Tech Education in the Modern World</title>
+    <description>
+      Why tech education is crucial for the future workforce.
+    </description>
+    <date>2024/5/24</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Education</keyword>
+    </keywords>
+    <content>
+      <image>tech-education.png</image>
+      <markdown>
+tech-education.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>ai-creative-industries</slug>
+    <title>AI in Creative Industries: A Double-Edged Sword?</title>
+    <description>The impact of AI on creativity and the arts.</description>
+    <date>2024/5/25</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>AI</keyword>
+    </keywords>
+    <content>
+      <image>ai-creative-industries.png</image>
+      <markdown>
+ai-creative-industries.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>green-tech</slug>
+    <title>Green Technology: Innovations for a Sustainable Future</title>
+    <description>
+      How green tech is paving the way for a sustainable future.
+    </description>
+    <date>2024/5/26</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Sustainability</keyword>
+    </keywords>
+    <content>
+      <image>green-tech.png</image>
+      <markdown>
+green-tech.md
+      </markdown>
+    </content>
+  </blogpost>
+  <blogpost>
+    <slug>digital-privacy</slug>
+    <title>Digital Privacy in the Age of Surveillance</title>
+    <description>
+      The challenges and solutions for maintaining digital privacy today.
+    </description>
+    <date>2024/5/27</date>
+    <keywords>
+      <keyword>Technology</keyword>
+      <keyword>Privacy</keyword>
+    </keywords>
+    <content>
+      <image>digital-privacy.png</image>
+      <markdown>
+digital-privacy.md
+      </markdown>
+    </content>
+  </blogpost>
+</blogposts>

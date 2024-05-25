@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 import type { Theme } from './types';
 
 export function useTheme() {
@@ -14,7 +14,7 @@ export function useTheme() {
     return systemTheme;
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     localStorage.setItem('theme', theme);
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');

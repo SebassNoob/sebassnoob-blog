@@ -16,15 +16,23 @@ export function Pagination({
   labels,
 }: PaginationProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2" data-testid="pagination">
       {showPrevious && (
-        <Button href={hrefs[0]} className={defaultStyles}>
+        <Button
+          href={hrefs[0]}
+          className={defaultStyles}
+          data-testid="previous-button"
+        >
           <img src={leftArrow} alt="left arrow" className="w-4 h-4 me-2" />
           {labels[0]}
         </Button>
       )}
       {showNext && (
-        <Button href={hrefs[1]} className={defaultStyles}>
+        <Button
+          href={hrefs[1]}
+          className={defaultStyles}
+          data-testid="next-button"
+        >
           {labels[1]}
           <img
             src={leftArrow}

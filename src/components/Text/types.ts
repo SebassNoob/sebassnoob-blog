@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
+import type { ReactNode, HTMLAttributes } from 'react';
 
-export interface TextProps {
+export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   children: ReactNode;
   order?:
     | 'xs'

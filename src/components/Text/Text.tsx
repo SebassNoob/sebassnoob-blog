@@ -7,8 +7,13 @@ export function Text({
   children,
   order = 'base',
   className = defaultStyles,
+  ...rest
 }: TextProps) {
   const textSize = `text-${order}` as const;
   const mergedStyles = twMerge(textSize, className);
-  return <p className={mergedStyles}>{children}</p>;
+  return (
+    <p className={mergedStyles} {...rest}>
+      {children}
+    </p>
+  );
 }

@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
+import type { ReactNode, HTMLAttributes } from 'react';
 
-export interface CardProps {
+export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
   date?: string;
   imgSrc?: string;

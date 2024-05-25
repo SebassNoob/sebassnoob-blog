@@ -30,15 +30,14 @@ export function Header() {
       <button
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         className="p-2 rounded bg-slate-100 dark:bg-black"
+        data-testid="theme-toggle"
         tabIndex={-1}
       >
-        <div className="h-6 w-6">
-          {theme === 'light' ? (
-            <img src={moon} alt="Dark mode" />
-          ) : (
-            <img src={sun} alt="Light mode" />
-          )}
-        </div>
+        {theme === 'light' ? (
+          <img src={moon} alt="dark mode" className="h-6 w-6" />
+        ) : (
+          <img src={sun} alt="light mode" className="h-6 w-6" />
+        )}
       </button>
     </header>
   );

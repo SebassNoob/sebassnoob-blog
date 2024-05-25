@@ -1,9 +1,9 @@
 import { Title, Text, Pagination, PaginationProps } from '@components';
 import { useParams, useNavigate } from 'react-router-dom';
 import { BlogCard } from './components/BlogCard';
-import index from '@/content/index.xml';
 import { useEffect } from 'react';
 import { useKeybinds } from '@hooks';
+import index from '@/content/index.xml';
 
 const postsPerPage = 5;
 

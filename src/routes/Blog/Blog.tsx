@@ -72,7 +72,10 @@ export function Blog() {
         <Title>{parsedBlogpost.title}</Title>
       </div>
 
-      <div className="flex flex-col gap-2 w-full sm:w-3/4 lg:w-1/2">
+      <div
+        className="flex flex-col gap-2 w-full sm:w-3/4 lg:w-1/2"
+        data-testid="blog-content"
+      >
         <Markdown>{content}</Markdown>
       </div>
     </div>

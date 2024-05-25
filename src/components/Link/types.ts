@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
+import type { ReactNode, HTMLAttributes } from 'react';
 
-export interface LinkProps {
+export interface LinkProps extends HTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
   order?:
     | 'xs'
