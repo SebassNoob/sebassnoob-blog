@@ -1,0 +1,24 @@
+name: Run tests
+
+on:
+  push:
+    branches:
+      - 'master'
+  workflow_dispatch:
+
+jobs:
+  run-tests:
+    name: Run end-to-end tests with cypress
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: 1.1.10
+
+      - name: Run test script
+        run: bun run test

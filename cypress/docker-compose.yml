@@ -14,7 +14,7 @@ services:
       - test
     develop:
       watch:
-        - action: sync+restart
+        - action: rebuild
           path: .
           target: /e2e
 
@@ -32,7 +32,7 @@ services:
       - test
     develop:
       watch:
-        - action: sync+restart
+        - action: rebuild
           path: .
           target: /e2e
 
@@ -50,7 +50,7 @@ services:
       - test
     develop:
       watch:
-        - action: sync+restart
+        - action: rebuild
           path: .
           target: /e2e
 
@@ -68,7 +68,7 @@ services:
       - test
     develop:
       watch:
-        - action: sync+restart
+        - action: rebuild
           path: .
           target: /e2e
 
@@ -86,7 +86,7 @@ services:
       - test
     develop:
       watch:
-        - action: sync+restart
+        - action: rebuild
           path: .
           target: /e2e
 

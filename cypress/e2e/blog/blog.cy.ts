@@ -20,19 +20,23 @@ describe('blog page', () => {
 
   it('should be responsive', () => {
     cy.visit(`/blog/${TEST_SLUG}`);
-  
+
     cy.viewport(SMALL_SCREEN_WIDTH - 1, 568);
     // should be fullscreen on small screens
     cy.window().then((win) => {
-      const isFullScreen = win.matchMedia(`(min-width: ${SMALL_SCREEN_WIDTH}px)`).matches;
+      const isFullScreen = win.matchMedia(
+        `(min-width: ${SMALL_SCREEN_WIDTH}px)`
+      ).matches;
       expect(isFullScreen).to.be.false;
     });
-  
+
     // reset the viewport
     cy.viewport(SMALL_SCREEN_WIDTH + 1, 568);
     // should not be fullscreen on larger screens, there should be a media query
     cy.window().then((win) => {
-      const isFullScreen = win.matchMedia(`(min-width: ${SMALL_SCREEN_WIDTH}px)`).matches;
+      const isFullScreen = win.matchMedia(
+        `(min-width: ${SMALL_SCREEN_WIDTH}px)`
+      ).matches;
       expect(isFullScreen).to.be.true;
     });
   });
