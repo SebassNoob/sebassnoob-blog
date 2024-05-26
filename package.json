@@ -9,7 +9,7 @@
     "lint": "bunx eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prettier": "bunx prettier --plugin=@prettier/plugin-xml --write .",
-    "test": "cd cypress && sh -c './test.sh --no-cache'",
+    "test": "cd cypress && bash -c './test.sh --no-cache'",
     "test:dev": "cd cypress && sh -c './test.sh --dev'"
   },
   "dependencies": {
