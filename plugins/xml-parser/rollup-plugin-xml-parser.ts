@@ -46,42 +46,26 @@ function validateParsedJson(json: any) {
 
     takenSlugs.add(post.slug);
 
-    if (!post.title) {
-      console.error(post);
-      throw new Error(
-        `Missing 'title' property in a blogpost in index ${index}`
-      );
-    }
-    if (!post.description) {
-      console.error(post);
-      throw new Error(
-        `Missing 'description' property in a blogpost in index ${index}`
-      );
-    }
-    if (!post.content) {
-      console.error(post);
-      throw new Error(
-        `Missing 'content' property in a blogpost in index ${index}`
-      );
-    }
-    if (!post.keywords) {
-      console.error(post);
-      throw new Error(
-        `Missing 'keywords' property in a blogpost in index ${index}`
-      );
-    }
+    const propsToCheck = [
+      'title',
+      'description',
+      'content',
+      'keywords',
+      'date',
+    ];
+    propsToCheck.forEach((prop) => {
+      if (!post[prop]) {
+        console.error(post);
+        throw new Error(
+          `Missing '${prop}' property in a blogpost in index ${index}`
+        );
+      }
+    });
 
     if (!Array.isArray(post.keywords.keyword)) {
       console.error(post);
       throw new Error(
         `'keywords' property is not an array in a blogpost in index ${index}`
-      );
-    }
-
-    if (!post.date) {
-      console.error(post);
-      throw new Error(
-        `Missing 'date' property in a blogpost in index ${index}`
       );
     }
 

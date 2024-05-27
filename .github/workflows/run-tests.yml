@@ -25,3 +25,9 @@ jobs:
 
       - name: Run test script
         run: bun run test
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-report
+          path: cypress/results/index.html
