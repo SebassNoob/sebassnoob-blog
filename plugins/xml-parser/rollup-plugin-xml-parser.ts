@@ -63,10 +63,8 @@ function validateParsedJson(json: any) {
     });
 
     if (!Array.isArray(post.keywords.keyword)) {
-      console.error(post);
-      throw new Error(
-        `'keywords' property is not an array in a blogpost in index ${index}`
-      );
+      // coarce to array
+      post.keywords.keyword = [post.keywords.keyword];
     }
 
     if (!post.content.markdown) {

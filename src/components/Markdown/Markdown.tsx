@@ -13,21 +13,17 @@ export function Markdown({ children }: MarkdownProps) {
 
   useEffect(() => {
     setLoading(true);
-    if (theme === 'dark') {
-      import('highlight.js/styles/github-dark.css')
-        .then(() => setLoading(false))
-        .catch(() => {
-          setLoading(false);
-          console.error('Failed to load highlight.js dark theme');
-        });
-    } else {
-      import('highlight.js/styles/github.css')
-        .then(() => setLoading(false))
-        .catch(() => {
-          setLoading(false);
-          console.error('Failed to load highlight.js light theme');
-        });
-    }
+    const importPromise =
+      theme === 'dark'
+        ? import('highlight.js/styles/github-dark.css')
+        : import('highlight.js/styles/github.css');
+
+    importPromise
+      .catch(() => {
+        console.error(`Failed to load highlight.js ${theme} theme`);
+      }).finally(() => {
+        setLoading(false);
+      });
   }, [theme]);
 
   if (loading) {
@@ -42,27 +38,52 @@ export function Markdown({ children }: MarkdownProps) {
     <MarkdownRaw
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeHighlight]}
+      className="leading-relaxed flex flex-col gap-4"
       components={{
         h1(props) {
-          return <Title order={1}>{props.children}</Title>;
+          return (
+            <Title order={1} {...props}>
+              {props.children}
+            </Title>
+          );
         },
         h2(props) {
-          return <Title order={2}>{props.children}</Title>;
+          return (
+            <Title order={2} {...props}>
+              {props.children}
+            </Title>
+          );
         },
         h3(props) {
-          return <Title order={3}>{props.children}</Title>;
+          return (
+            <Title order={3} {...props}>
+              {props.children}
+            </Title>
+          );
         },
         h4(props) {
-          return <Title order={4}>{props.children}</Title>;
+          return (
+            <Title order={4} {...props}>
+              {props.children}
+            </Title>
+          );
         },
         h5(props) {
-          return <Title order={5}>{props.children}</Title>;
+          return (
+            <Title order={5} {...props}>
+              {props.children}
+            </Title>
+          );
         },
         h6(props) {
-          return <Title order={6}>{props.children}</Title>;
+          return (
+            <Title order={6} {...props}>
+              {props.children}
+            </Title>
+          );
         },
         p(props) {
-          return <Text>{props.children}</Text>;
+          return <Text {...props}>{props.children}</Text>;
         },
         pre(props) {
           return (
@@ -71,80 +92,78 @@ export function Markdown({ children }: MarkdownProps) {
                 'overflow-auto bg-slate-200 dark:bg-slate-700 p-2 rounded-md',
                 props.className
               )}
+              {...props}
             >
               {props.children}
             </pre>
           );
         },
         a(props) {
-          return <Link href={props.href as string}>{props.children}</Link>;
+          if (!props.href) return <Text>{props.children}</Text>;
+          return <Link href={props.href}>{props.children}</Link>;
         },
         code(props) {
-          return (
-            <Code className={twMerge(props.className, '!bg-transparent')}>
-              {props.children}
-            </Code>
-          );
+          return <Code {...props}>{props.children}</Code>;
         },
         li(props) {
           return (
-            <List.ListItem className={props.className}>
+            <List.ListItem className={props.className} {...props}>
               {props.children}
             </List.ListItem>
           );
         },
         ul(props) {
           return (
-            <List.UnorderedList className={props.className}>
+            <List.UnorderedList className={props.className} {...props}>
               {props.children}
             </List.UnorderedList>
           );
         },
         ol(props) {
           return (
-            <List.OrderedList className={props.className}>
+            <List.OrderedList className={props.className} {...props}>
               {props.children}
             </List.OrderedList>
           );
         },
         table(props) {
           return (
-            <Table.Table className={props.className}>
+            <Table.Table className={props.className} {...props}>
               {props.children}
             </Table.Table>
           );
         },
         thead(props) {
           return (
-            <Table.TableHead className={props.className}>
+            <Table.TableHead className={props.className} {...props}>
               {props.children}
             </Table.TableHead>
           );
         },
         tbody(props) {
           return (
-            <Table.TableBody className={props.className}>
+            <Table.TableBody className={props.className} {...props}>
               {props.children}
             </Table.TableBody>
           );
         },
         tr(props) {
           return (
-            <Table.TableRow className={props.className}>
+            <Table.TableRow className={props.className} {...props}>
               {props.children}
             </Table.TableRow>
           );
         },
         th(props) {
           return (
-            <Table.TableHeader className={props.className}>
+            <Table.TableHeader className={props.className} {...props}>
               {props.children}
             </Table.TableHeader>
           );
         },
         td(props) {
           return (
-            <Table.TableCell className={props.className}>
+            <Table.TableCell className={props.className} {...props}>
               {props.children}
             </Table.TableCell>
           );

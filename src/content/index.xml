@@ -39,4 +39,21 @@ ai-ethics.md
       </markdown>
     </content>
   </blogpost>
+  <blogpost>
+    <slug>devlog</slug>
+    <title>Building this blog - a developer log</title>
+    <description>
+      A developer log of the process of building this blog. Warning: Contains
+      some technical jargon.
+    </description>
+    <date>2024/6/2</date>
+    <keywords>
+      <keyword>Meta</keyword>
+    </keywords>
+    <content>
+      <markdown>
+devlog.md
+      </markdown>
+    </content>
+  </blogpost>
 </blogposts>

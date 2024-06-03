@@ -10,7 +10,10 @@ export function Error404() {
   return (
     <div className="flex flex-col items-center justify-center h-full gap-4">
       <Title>404 Not Found</Title>
-      <Text>This page could not be located. Perhaps it got lost? Regardless, nothing's here now.</Text>
+      <Text>
+        This page could not be located. Perhaps it got lost? Regardless,
+        nothing's here now.
+      </Text>
     </div>
   );
 }

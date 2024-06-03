@@ -36,8 +36,14 @@ do
   esac
 done
 
-# check if docker is running
+# check if docker is installed
 if ! docker --version > /dev/null; then
+  echo "Docker is not running. Please start Docker and try again."
+  exit 1
+fi
+
+# check if docker is running
+if ! docker info > /dev/null; then
   echo "Docker is not running. Please start Docker and try again."
   exit 1
 fi

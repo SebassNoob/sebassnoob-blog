@@ -5,7 +5,7 @@ export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
     const localStorageTheme = localStorage.getItem('theme');
     if (localStorageTheme === 'light' || localStorageTheme === 'dark') {
-      return localStorageTheme as Theme;
+      return localStorageTheme;
     }
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
       .matches

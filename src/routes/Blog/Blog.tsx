@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { usePublic, useKeybinds } from '@hooks';
-import { Markdown, Title, Text, Loader, Image } from '@components';
+import { Markdown, Title, Text, Loader, Image, Button } from '@components';
 import blogposts from '@/content/index.xml';
 import { useEffect, useState } from 'react';
 import type { ParsedBlogpost } from './types';
@@ -78,6 +78,9 @@ export function Blog() {
       >
         <Markdown>{content}</Markdown>
       </div>
+      <Button onClick={() => navigate('/')} className="mt-4">
+        Go Home
+      </Button>
     </div>
   );
 }

@@ -17,12 +17,12 @@ active:visited:text-violet-800 dark:active:visited:text-violet-600
 export function Link({
   children,
   order = 'base',
-  className = defaultStyles,
+  className,
   href,
   ...rest
 }: LinkProps) {
   const textSize = `text-${order}` as const;
-  const mergedStyles = twMerge(textSize, className);
+  const mergedStyles = twMerge(defaultStyles, textSize, className);
 
   return (
     <ReactRouterLink to={href} className={mergedStyles} {...rest}>
