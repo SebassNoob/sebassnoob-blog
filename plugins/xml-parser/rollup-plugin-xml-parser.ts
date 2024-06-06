@@ -6,16 +6,14 @@ interface Blogpost {
   title: string;
   description: string;
   date: string;
-  keywords: {
-    keyword: string[];
-  };
+  keywords: string[];
   content: {
     image?: string;
     markdown: string;
   };
 }
 
-function validateParsedJson(json: any) {
+export function transformParsedJson(json: any) {
   if (!json.blogposts || !json.blogposts.blogpost) {
     console.error(json);
     throw new Error(`Missing 'blogposts' property`);
@@ -64,7 +62,9 @@ function validateParsedJson(json: any) {
 
     if (!Array.isArray(post.keywords.keyword)) {
       // coarce to array
-      post.keywords.keyword = [post.keywords.keyword];
+      post.keywords = [post.keywords.keyword];
+    } else {
+      post.keywords = post.keywords.keyword;
     }
 
     if (!post.content.markdown) {
@@ -89,7 +89,7 @@ export default function xmlParser() {
       const xml = readFileSync(id, 'utf8');
       const unvalidatedjObj = parser.parse(xml);
       try {
-        const jObj = validateParsedJson(unvalidatedjObj);
+        const jObj = transformParsedJson(unvalidatedjObj);
         return `export default ${JSON.stringify(jObj)};`;
       } catch (e) {
         console.error(e);

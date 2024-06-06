@@ -3,9 +3,7 @@ interface Blogpost {
   title: string;
   description: string;
   date: string;
-  keywords: {
-    keyword: string[];
-  };
+  keywords:  string[];
   content: {
     image?: string;
     markdown: string;

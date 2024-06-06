@@ -21,7 +21,6 @@
     "noFallthroughCasesInSwitch": true,
 
     "esModuleInterop": true,
-
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
@@ -33,7 +32,9 @@
       "@providers/*": ["src/providers/*"],
       "@providers": ["src/providers"],
       "@routes/*": ["src/routes/*"],
-      "@routes": ["src/routes"]
+      "@routes": ["src/routes"],
+      "@plugins/*": ["plugins/*"],
+      "@plugins": ["plugins"],
     }
   },
   "include": ["src/**/*", "plugins/**/*.d.ts"],

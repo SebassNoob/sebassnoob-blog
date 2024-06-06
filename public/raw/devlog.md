@@ -125,7 +125,7 @@ Obligatory explanation:
 import { readFileSync } from 'fs';
 import { XMLParser } from 'fast-xml-parser';
 
-const validateParsedJson = (json: any): Blogpost[] => {...}
+const transformParsedJson = (json: any): Blogpost[] => {...}
 
 export default function xmlParser() {
   const parser = new XMLParser();
@@ -136,7 +136,7 @@ export default function xmlParser() {
       const xml = readFileSync(id, 'utf8');
       const unvalidatedjObj = parser.parse(xml);
       try {
-        const jObj = validateParsedJson(unvalidatedjObj);
+        const jObj = transformParsedJson(unvalidatedjObj);
         return `export default ${JSON.stringify(jObj)};`;
       } catch (e) {
         console.error(e);

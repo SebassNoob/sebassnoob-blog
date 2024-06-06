@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useKeybinds } from '@hooks';
 import index from '@/content/index.xml';
 
-const postsPerPage = 5;
+const postsPerPage = Number(import.meta.env.VITE_POSTS_PER_PAGE) || 5;
 
 const sortedIndex = index.sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()

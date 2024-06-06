@@ -1,7 +1,9 @@
-FROM oven/bun:1.1.8
+FROM oven/bun:1.1.12
 WORKDIR /app
 
-COPY . .
+COPY ./plugins plugins
+COPY ./src src
+COPY ./public public
 
 RUN bun i 
 RUN bun run build

@@ -21,7 +21,8 @@ export function Markdown({ children }: MarkdownProps) {
     importPromise
       .catch(() => {
         console.error(`Failed to load highlight.js ${theme} theme`);
-      }).finally(() => {
+      })
+      .finally(() => {
         setLoading(false);
       });
   }, [theme]);

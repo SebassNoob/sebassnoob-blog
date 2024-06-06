@@ -20,11 +20,11 @@ export function BlogCard({
       data-testid="blog-card"
     >
       <div className="flex flex-row gap-2">
-        {keywords.keyword.map((keyword) => (
+        {keywords.map((keyword) => (
           <Pill key={keyword}>{keyword}</Pill>
         ))}
       </div>
-      <Button href={`/blog/${slug}`}>Read More</Button>
+      <Button href={`/blog/${slug}`} aria-label={`Go to blog regarding ${title}`}>Read More</Button>
     </Card>
   );
 }
