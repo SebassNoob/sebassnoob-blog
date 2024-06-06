@@ -24,7 +24,12 @@ export function BlogCard({
           <Pill key={keyword}>{keyword}</Pill>
         ))}
       </div>
-      <Button href={`/blog/${slug}`} aria-label={`Go to blog regarding ${title}`}>Read More</Button>
+      <Button
+        href={`/blog/${slug}`}
+        aria-label={`Go to blog regarding ${title}`}
+      >
+        Read More
+      </Button>
     </Card>
   );
 }

@@ -1,1 +1,4 @@
-export { default as xmlParser, transformParsedJson } from './rollup-plugin-xml-parser';
+export {
+  default as xmlParser,
+  transformParsedJson,
+} from './rollup-plugin-xml-parser';

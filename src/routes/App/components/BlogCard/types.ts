@@ -3,7 +3,7 @@ export interface Blogpost {
   title: string;
   description: string;
   date: string;
-  keywords:  string[];
+  keywords: string[];
   content: {
     image?: string;
     markdown: string;

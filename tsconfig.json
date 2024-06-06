@@ -34,7 +34,7 @@
       "@routes/*": ["src/routes/*"],
       "@routes": ["src/routes"],
       "@plugins/*": ["plugins/*"],
-      "@plugins": ["plugins"],
+      "@plugins": ["plugins"]
     }
   },
   "include": ["src/**/*", "plugins/**/*.d.ts"],
