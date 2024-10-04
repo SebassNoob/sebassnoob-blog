@@ -24,6 +24,8 @@ prettier: `bun run prettier`
 
 build: `bun run build`
 
+start: `docker build -t sebassnoob-blog .` and then `docker run -p 3001:80 -d sebassnoob-blog`. Open localhost:3001 to see the server.
+
 ### tests
 
 requires docker. the test directory is `/cypress`.
