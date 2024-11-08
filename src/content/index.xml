@@ -56,4 +56,22 @@ devlog.md
       </markdown>
     </content>
   </blogpost>
+  <blogpost>
+    <slug>free-speech</slug>
+    <title>Unshackled Speech as a Human Right</title>
+    <description>
+      The history of free speech and its importance in the modern world.
+    </description>
+    <date>2024/11/9</date>
+    <keywords>
+      <keyword>Opinion</keyword>
+      <keyword>Politics</keyword>
+    </keywords>
+    <content>
+      <image>free-speech.jpg</image>
+      <markdown>
+free-speech.md
+      </markdown>
+    </content>
+  </blogpost>
 </blogposts>
