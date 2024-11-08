@@ -27,4 +27,3 @@ From the [arrest](https://www.theguardian.com/technology/2024/sep/23/telegram-il
 This isn't to downplay the risks of hate speech that inevitably comes along with free speech. But the future does seem grim for many free speech proponents worldwide. With the rise of the far right in western political systems who seek to impose more regulations with regard to which kinds of media conflict with their traditional values, free speech is now on the downtrend -- a big step backward from the liberalisation of free speech in the 20th century.
 
 While nobody can predict the future, control over speech seems to be the way to go from here on out. I fear that the new generation will step into a world where speech is limited, rights are curtailed and protests ignored. As members of our society, and of the global community, we must stop this trend both at home and at the ballot box. If not, maybe we don't deserve our hard-earned rights.
-
