@@ -175,3 +175,5 @@ I'm not sure if I'm going to post often. Part of my goal was to give myself moti
 I learnt a lot from this project despite it being one of the 'simpler' ones. I really enjoyed working on it as well.
 
 Thanks for reading!
+
+Note: This post was written as of commit [350a661](https://github.com/SebassNoob/sebassnoob-blog/tree/350a6613da993a30f2740cff55dcdde625834426)

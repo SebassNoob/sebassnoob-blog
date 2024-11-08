@@ -15,16 +15,35 @@ export function Markdown({ children }: MarkdownProps) {
     setLoading(true);
     const importPromise =
       theme === 'dark'
-        ? import('highlight.js/styles/github-dark.css')
-        : import('highlight.js/styles/github.css');
+        ? import('highlight.js/styles/github-dark.css?raw')
+        : import('highlight.js/styles/github.css?raw');
 
-    importPromise
-      .catch(() => {
+    const loadCss = async () => {
+      try {
+        const module = await importPromise;
+        const rawStyle = module.default;
+        const elem = document.createElement('style');
+        elem.innerHTML = rawStyle;
+        document.head.appendChild(elem);
+
+        // Cleanup function
+        return () => {
+          document.head.removeChild(elem);
+        };
+      } catch (e) {
         console.error(`Failed to load highlight.js ${theme} theme`);
-      })
-      .finally(() => {
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    // load the css and return a cleanup function
+    const cleanup = loadCss();
+
+    // remove the style tag when the theme changes
+    return () => {
+      cleanup.then((removeStyle) => removeStyle && removeStyle());
+    };
   }, [theme]);
 
   if (loading) {
