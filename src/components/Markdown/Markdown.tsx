@@ -55,142 +55,143 @@ export function Markdown({ children }: MarkdownProps) {
   }
 
   return (
-    <MarkdownRaw
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeHighlight]}
-      className="leading-relaxed flex flex-col gap-4"
-      components={{
-        h1(props) {
-          return (
-            <Title order={1} {...props}>
-              {props.children}
-            </Title>
-          );
-        },
-        h2(props) {
-          return (
-            <Title order={2} {...props}>
-              {props.children}
-            </Title>
-          );
-        },
-        h3(props) {
-          return (
-            <Title order={3} {...props}>
-              {props.children}
-            </Title>
-          );
-        },
-        h4(props) {
-          return (
-            <Title order={4} {...props}>
-              {props.children}
-            </Title>
-          );
-        },
-        h5(props) {
-          return (
-            <Title order={5} {...props}>
-              {props.children}
-            </Title>
-          );
-        },
-        h6(props) {
-          return (
-            <Title order={6} {...props}>
-              {props.children}
-            </Title>
-          );
-        },
-        p(props) {
-          return <Text {...props}>{props.children}</Text>;
-        },
-        pre(props) {
-          return (
-            <pre
-              className={twMerge(
-                'overflow-auto bg-slate-200 dark:bg-slate-700 p-2 rounded-md',
-                props.className
-              )}
-              {...props}
-            >
-              {props.children}
-            </pre>
-          );
-        },
-        a(props) {
-          if (!props.href) return <Text>{props.children}</Text>;
-          return <Link href={props.href}>{props.children}</Link>;
-        },
-        code(props) {
-          return <Code {...props}>{props.children}</Code>;
-        },
-        li(props) {
-          return (
-            <List.ListItem className={props.className} {...props}>
-              {props.children}
-            </List.ListItem>
-          );
-        },
-        ul(props) {
-          return (
-            <List.UnorderedList className={props.className} {...props}>
-              {props.children}
-            </List.UnorderedList>
-          );
-        },
-        ol(props) {
-          return (
-            <List.OrderedList className={props.className} {...props}>
-              {props.children}
-            </List.OrderedList>
-          );
-        },
-        table(props) {
-          return (
-            <Table.Table className={props.className} {...props}>
-              {props.children}
-            </Table.Table>
-          );
-        },
-        thead(props) {
-          return (
-            <Table.TableHead className={props.className} {...props}>
-              {props.children}
-            </Table.TableHead>
-          );
-        },
-        tbody(props) {
-          return (
-            <Table.TableBody className={props.className} {...props}>
-              {props.children}
-            </Table.TableBody>
-          );
-        },
-        tr(props) {
-          return (
-            <Table.TableRow className={props.className} {...props}>
-              {props.children}
-            </Table.TableRow>
-          );
-        },
-        th(props) {
-          return (
-            <Table.TableHeader className={props.className} {...props}>
-              {props.children}
-            </Table.TableHeader>
-          );
-        },
-        td(props) {
-          return (
-            <Table.TableCell className={props.className} {...props}>
-              {props.children}
-            </Table.TableCell>
-          );
-        },
-      }}
-    >
-      {children}
-    </MarkdownRaw>
+    <div className="leading-relaxed flex flex-col gap-4">
+      <MarkdownRaw
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeHighlight]}
+        components={{
+          h1(props) {
+            return (
+              <Title order={1} {...props}>
+                {props.children}
+              </Title>
+            );
+          },
+          h2(props) {
+            return (
+              <Title order={2} {...props}>
+                {props.children}
+              </Title>
+            );
+          },
+          h3(props) {
+            return (
+              <Title order={3} {...props}>
+                {props.children}
+              </Title>
+            );
+          },
+          h4(props) {
+            return (
+              <Title order={4} {...props}>
+                {props.children}
+              </Title>
+            );
+          },
+          h5(props) {
+            return (
+              <Title order={5} {...props}>
+                {props.children}
+              </Title>
+            );
+          },
+          h6(props) {
+            return (
+              <Title order={6} {...props}>
+                {props.children}
+              </Title>
+            );
+          },
+          p(props) {
+            return <Text {...props}>{props.children}</Text>;
+          },
+          pre(props) {
+            return (
+              <pre
+                className={twMerge(
+                  'overflow-auto bg-slate-200 dark:bg-slate-700 p-2 rounded-md',
+                  props.className
+                )}
+                {...props}
+              >
+                {props.children}
+              </pre>
+            );
+          },
+          a(props) {
+            if (!props.href) return <Text>{props.children}</Text>;
+            return <Link href={props.href}>{props.children}</Link>;
+          },
+          code(props) {
+            return <Code {...props}>{props.children}</Code>;
+          },
+          li(props) {
+            return (
+              <List.ListItem className={props.className} {...props}>
+                {props.children}
+              </List.ListItem>
+            );
+          },
+          ul(props) {
+            return (
+              <List.UnorderedList className={props.className} {...props}>
+                {props.children}
+              </List.UnorderedList>
+            );
+          },
+          ol(props) {
+            return (
+              <List.OrderedList className={props.className} {...props}>
+                {props.children}
+              </List.OrderedList>
+            );
+          },
+          table(props) {
+            return (
+              <Table.Table className={props.className} {...props}>
+                {props.children}
+              </Table.Table>
+            );
+          },
+          thead(props) {
+            return (
+              <Table.TableHead className={props.className} {...props}>
+                {props.children}
+              </Table.TableHead>
+            );
+          },
+          tbody(props) {
+            return (
+              <Table.TableBody className={props.className} {...props}>
+                {props.children}
+              </Table.TableBody>
+            );
+          },
+          tr(props) {
+            return (
+              <Table.TableRow className={props.className} {...props}>
+                {props.children}
+              </Table.TableRow>
+            );
+          },
+          th(props) {
+            return (
+              <Table.TableHeader className={props.className} {...props}>
+                {props.children}
+              </Table.TableHeader>
+            );
+          },
+          td(props) {
+            return (
+              <Table.TableCell className={props.className} {...props}>
+                {props.children}
+              </Table.TableCell>
+            );
+          },
+        }}
+      >
+        {children}
+      </MarkdownRaw>
+    </div>
   );
 }

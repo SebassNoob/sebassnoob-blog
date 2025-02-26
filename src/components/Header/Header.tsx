@@ -23,13 +23,13 @@ export function Header() {
           alt="Profile"
           className="rounded-full h-12 w-12 object-cover mr-4"
         />
-        <pre className="dark:bg-black bg-slate-100 p-2 rounded">
+        <pre className="dark:bg-black bg-slate-100 p-2 rounded-sm">
           <Code>SebassNoob's Blog</Code>
         </pre>
       </div>
       <button
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-        className="p-2 rounded bg-slate-100 dark:bg-black"
+        className="p-2 rounded-sm bg-slate-100 dark:bg-black"
         data-testid="theme-toggle"
         tabIndex={-1}
       >

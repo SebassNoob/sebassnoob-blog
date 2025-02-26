@@ -7,6 +7,7 @@ import {
 } from './constants';
 import { Loader } from '@components';
 import { Link as ReactRouterLink } from 'react-router-dom';
+import type { ReactNode } from 'react';
 
 export function Button({
   children,
@@ -32,7 +33,7 @@ export function Button({
     </div>
   );
 
-  const wrapWithLink = (element: JSX.Element) => {
+  const wrapWithLink = (element: ReactNode) => {
     return href ? (
       <ReactRouterLink to={href} tabIndex={-1}>
         {element}
