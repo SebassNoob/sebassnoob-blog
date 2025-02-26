@@ -1,4 +1,4 @@
-I recently just graduated [Junior College](https://en.wikipedia.org/wiki/Junior_college_(Singapore)) (JC) in Singapore. As I personally reflect on my experiences in the education system up until now, I'd like to share some thoughts on them.
+I recently just graduated [Junior College](<https://en.wikipedia.org/wiki/Junior_college_(Singapore)>) (JC) in Singapore. As I personally reflect on my experiences in the education system up until now, I'd like to share some thoughts on them.
 
 ## Chasing that last mark
 
@@ -14,6 +14,6 @@ All the economics graphs, quantum physics concepts, mathematical theorems that I
 
 ## A frustrated conclusion
 
-My education wasn't all bad. I made friends, embarked on new experiences, and had shared experiences with the rest of my cohort. 
+My education wasn't all bad. I made friends, embarked on new experiences, and had shared experiences with the rest of my cohort.
 
 At the end of the day, one's past grades and content knowledge don't matter in the long run. Changes are beginning to be made to make the education system here less stressful and more forgiving. All that matters now is looking ahead to the future and writing one's own unique story.
