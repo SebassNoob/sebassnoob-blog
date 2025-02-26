@@ -3,7 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { ClientProvider } from '@providers';
-import { App, Blog, Error404 } from '@routes';
+import { lazy } from 'react';
+const App = lazy(() => import('@routes').then((module) => ({ default: module.App })));
+const Blog = lazy(() => import('@routes').then((module) => ({ default: module.Blog })));
+const Error404 = lazy(() => import('@routes').then((module) => ({ default: module.Error404 })));
 import { Layout } from './layout';
 
 const routes = [
