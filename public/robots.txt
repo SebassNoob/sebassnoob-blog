@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://sebassnoob-blog.vercel.app/sitemap.xml
+Sitemap: https://blog.sebassnoob.dev/sitemap.xml

@@ -74,4 +74,21 @@ free-speech.md
       </markdown>
     </content>
   </blogpost>
+  <blogpost>
+    <slug>a-reflection</slug>
+    <title>A reflection</title>
+    <description>
+      A reflection on my experiences in the Singaporean education system.
+    </description>
+    <date>2025/2/27</date>
+    <keywords>
+      <keyword>Opinion</keyword>
+    </keywords>
+    <content>
+      <image>a-reflection.png</image>
+      <markdown>
+a-reflection.md
+      </markdown>
+    </content>
+  </blogpost>
 </blogposts>
