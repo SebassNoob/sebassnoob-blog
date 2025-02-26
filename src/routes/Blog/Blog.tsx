@@ -45,7 +45,7 @@ export function Blog() {
       markdown: post.content.markdown,
       date: post.date,
     });
-  }, []);
+  }, [navigate, slug]);
 
   if (!parsedBlogpost) {
     return (

@@ -66,7 +66,7 @@ export function App() {
     ) {
       navigate('/');
     }
-  }, [pageNumber]);
+  }, [pageNumber, navigate]);
 
   return (
     <div className="flex flex-col items-center gap-4">

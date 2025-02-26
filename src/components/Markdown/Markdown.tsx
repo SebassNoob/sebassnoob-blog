@@ -31,7 +31,7 @@ export function Markdown({ children }: MarkdownProps) {
           document.head.removeChild(elem);
         };
       } catch (e) {
-        console.error(`Failed to load highlight.js ${theme} theme`);
+        console.error(`Failed to load highlight.js ${theme} theme: ${e}`);
       } finally {
         setLoading(false);
       }
